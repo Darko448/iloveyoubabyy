@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>❤️ For My Baby ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#fff0f6,#ffe4ec,#ffd6e7);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Main Text */
+h1{
+    color:#ff1493;
+    font-size:70px;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:6px;
+    text-shadow:
+        0 0 10px #ff69b4,
+        0 0 20px #ff69b4,
+        0 0 40px #ff1493;
+    animation:pulse 2s infinite;
+    z-index:10;
+}
+
+/* Floating Hearts */
+.heart{
+    position:absolute;
+    color:#ff4d88;
+    animation:float linear infinite;
+    opacity:.8;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(110vh) scale(.8);
+    }
+    to{
+        transform:translateY(-10vh) scale(1.3);
+    }
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>I LOVE YOU<br>MY BABY ❤️</h1>
+
+<script>
+for(let i=0;i<70;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(15+Math.random()*35)+"px";
+    heart.style.animationDuration=(4+Math.random()*6)+"s";
+    heart.style.animationDelay=Math.random()*5+"s";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
